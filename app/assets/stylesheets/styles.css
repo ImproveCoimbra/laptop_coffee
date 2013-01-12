@@ -30,7 +30,6 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .overallMap {
     width: 100%;
-    background-image: url('../img/fake.PNG');
     height: 400px;
     background-color: rgb(200, 200, 200);
 }
