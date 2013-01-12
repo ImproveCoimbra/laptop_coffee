@@ -1,5 +1,5 @@
 <div class="overallMap">
-  <%= gmaps4rails(@json) %>
+  <%= gmaps(:markers => {"data" => @json}) %>
 </div>
 
 <div class="featuresContainer">
@@ -19,11 +19,3 @@
         Esta é uma plataforma para quem procura em Coimbra um café onde possa trabalhar ou estudar, e que esteja apto à utilização de computadores.
     </span>
 </div>
-
-<h1>DEBUG!</h1>
-
-<ul>
-  <% @places.each do |place| %>
-    <li><%= place.name %> - <%= place.latitude %>, <%= place.longitude %></li>
-  <% end %>
-</ul>

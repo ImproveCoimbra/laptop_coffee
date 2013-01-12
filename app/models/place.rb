@@ -12,4 +12,8 @@ class Place < ActiveRecord::Base
     #describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
     self.address 
   end
+
+  def gmaps4rails_infowindow
+    "<h4>#{ERB::Util.html_escape name}</h4><p>#{ERB::Util.html_escape description}</p>"
+  end
 end
