@@ -2,6 +2,6 @@
 
 <ul>
   <% @places.each do |place| %>
-    <li><%= place.name %></li>
+    <li><%= place.name %> - <%= place.latitude %>, <%= place.longitude %></li>
   <% end %>
 </ul>
