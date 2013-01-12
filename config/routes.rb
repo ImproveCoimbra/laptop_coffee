@@ -1,4 +1,8 @@
 LaptopCoffee::Application.routes.draw do
+
+  match ':action', :controller => 'front'
+  root :to => "front#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
