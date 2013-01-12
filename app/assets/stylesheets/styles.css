@@ -1,0 +1,71 @@
+body {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: 'Garamond', serif;
+}
+
+header {
+    font-size: 30px;
+    text-align: center;
+    line-height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header [class^="icon-"], header [class*=" icon-"] {
+    vertical-align: middle;
+    margin-bottom: 7px;
+    -webkit-transition: opacity 350ms;
+    transition: opacity 350ms;
+    opacity: 0.7;
+}
+
+header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
+    vertical-align: middle;
+    margin-bottom: 7px;
+    opacity: 1;
+}
+
+
+
+.overallMap {
+    width: 100%;
+    background-image: url('../img/fake.PNG');
+    height: 400px;
+    background-color: rgb(200, 200, 200);
+}
+
+
+.featuresContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.featuresContainer > span{
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+}
+
+.featuresContainer  [class*=" icon-"], .featuresContainer [class^="icon-"] {
+    vertical-align: middle;
+    margin-bottom: 7px;
+}
+
+.descriptionContainer {
+    text-align: center;
+}
+
+.descriptionContainer > span {
+    display: inline-block;
+    width: 600px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 11px;
+}
