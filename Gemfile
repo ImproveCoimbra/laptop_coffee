@@ -40,3 +40,4 @@ gem 'jquery-rails'
 
 # Geolocation
 gem 'geocoder'
+gem 'gmaps4rails'
