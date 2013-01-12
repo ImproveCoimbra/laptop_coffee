@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20130112185150) do
     t.string   "name"
     t.string   "address"
     t.text     "description"
-    t.text     "urls"
+    t.text     "photo_urls"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

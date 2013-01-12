@@ -4,7 +4,7 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.text :description
-      t.text :urls
+      t.text :photo_urls
 
       t.timestamps
     end
