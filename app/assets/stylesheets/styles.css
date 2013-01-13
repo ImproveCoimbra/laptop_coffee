@@ -80,7 +80,6 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 }
 
 .featuresDescContainer {
-    padding-top: 20px;
     border-top: dashed 1px #979788;
 }
 
