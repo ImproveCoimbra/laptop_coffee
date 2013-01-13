@@ -48,6 +48,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 .featuresContainer {
     margin-top: 2px;
     margin-bottom: 2px;
+    font-size: 30px;
 }
 
 .featuresContainer > span{
@@ -72,12 +73,19 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 }
 
 .beNiceContainer {
-    display: inline-block;
-    width: 600px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 5px;
 }
 
 .beNiceDescContainer > span {
     vertical-align: top;
+}
+
+.beNiceContainer [class*=" icon-"], .beNiceContainer [class^="icon-"] {
+    vertical-align: middle;
+    margin-bottom: 7px;
 }
 
 .descriptionContainer {
