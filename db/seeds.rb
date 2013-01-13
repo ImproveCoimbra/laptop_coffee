@@ -41,13 +41,6 @@ Place.create!([
     :visible            => true,
   },
   {
-    :name               => "Café e Cervejaria Samambaia",
-    :description        => nil,
-    :address            => "Praça Infante Dom Henrique, 3030-055 Coimbra, Portugal",
-    :photo_urls         => ["https://lh3.googleusercontent.com/-RPyVoMokc0M/UGFGNLeEBzI/AAAAAAAAAAY/JdBaDKa69OI/s711/2012-09-24"],
-    :visible            => true,
-  },
-  {
     :name               => "Restaurante Piazza",
     :description        => nil,
     :address            => "Praça da República 38, 3000-995 Coimbra, Portugal",
