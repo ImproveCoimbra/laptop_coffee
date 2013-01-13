@@ -140,3 +140,17 @@ footer {
     width: 100%;
 }
 
+
+@media (max-width: 925px) {
+    .featuresContainer > span {
+        width: 100%;
+    }
+
+    .featuresDescContainer > span {
+        width: 100%;
+    }
+
+    .beNiceDescContainer  > span {
+        width: 100%;
+    }
+}
