@@ -1,4 +1,4 @@
-/*globals jQuery*/
+/*globals jQuery, Gmaps*/
 jQuery(function ($) {
     "use strict";
 
@@ -23,6 +23,11 @@ jQuery(function ($) {
     };
 
     ajdustSize();
+
+    //On the first time re adjust it to compensate for the eventual size change
+    if (Gmaps && Gmaps.map) {
+        Gmaps.map.adjustMapToBounds();
+    }
 
     jQueryCache.window.bind('resize', ajdustSize);
 });
