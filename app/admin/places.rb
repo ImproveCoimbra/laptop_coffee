@@ -8,7 +8,7 @@ ActiveAdmin.register Place do
     column :address
     column :latitude
     column :longitude
-    column :visible
+    column :'Homepage?' do |s| s.visible end
     default_actions
     #column { |sighting| link_to('Approve', approve_admin_sighting_path(sighting), :method => :put) unless sighting.approved? }
   end
@@ -19,7 +19,7 @@ ActiveAdmin.register Place do
     attributes_table do
       row :id
       row :name
-      row :visible
+      row :'Displayed on Homepage?' do s.visible end
       row :address
       row :computed_location do |s| render "map", { :markers => s.to_gmaps4rails }; end
       row :latitude
@@ -37,10 +37,10 @@ ActiveAdmin.register Place do
     f.inputs do
       f.input :name
       f.input :address
-      f.input :latitude
-      f.input :longitude
+      f.input :latitude unless f.object.new_record?
+      f.input :longitude unless f.object.new_record?
       f.input :description
-      f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.join("\n") }
+      f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }
       f.input :visible
     end
     f.buttons
@@ -66,6 +66,12 @@ ActiveAdmin.register Place do
     if controller.action_methods.include?('destroy')
       link_to(I18n.t('active_admin.delete_model', :model => 'Place'), resource_path(resource),
         :method => :delete, :confirm => I18n.t('active_admin.delete_confirmation'))
+    end
+  end
+
+  action_item :except => [:new, :show] do
+    if controller.action_methods.include?('new')
+      link_to(I18n.t('active_admin.new_model', :model => active_admin_config.resource_name), new_resource_path)
     end
   end
 
