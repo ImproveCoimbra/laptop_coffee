@@ -1,5 +1,5 @@
 class Place < ActiveRecord::Base
-  attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap
+  attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible
 
   geocoded_by :address
   after_validation :geocode, :process_photo_urls
