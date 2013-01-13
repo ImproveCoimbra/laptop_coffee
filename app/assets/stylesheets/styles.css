@@ -88,7 +88,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .beNiceContainer {
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .beNiceDescContainer > span {
@@ -97,7 +97,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .sobreContainer {
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .descriptionContainer {
