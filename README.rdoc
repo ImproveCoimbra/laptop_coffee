@@ -1,0 +1,8 @@
+=== Live Website (beta)
+
+http://laptop-coffee.herokuapp.com
+
+=== About
+
+This project is part of {Improve Coimbra's}[http://improve.madeincoimbra.org] first edition.
+More information on the {project's wiki}[http://projects.connectcoimbra.com/doku.php?id=laptop_friendly_laptops].
