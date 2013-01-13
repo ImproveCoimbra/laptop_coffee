@@ -25,6 +25,9 @@
             Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra
         </header>
 
+        <% if notice %><p class="notice"><%= notice %></p><% end %>
+        <% if alert %><p class="alert"><%= alert %></p><% end %>
+
         <%= yield %>
 
         <footer class="bellowTheFold">

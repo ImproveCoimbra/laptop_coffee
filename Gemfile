@@ -41,3 +41,6 @@ gem 'jquery-rails'
 # Geolocation
 gem 'geocoder'
 gem 'gmaps4rails'
+
+# Active Admin
+gem 'activeadmin'

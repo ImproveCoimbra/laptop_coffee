@@ -1,8 +1,8 @@
 class Place < ActiveRecord::Base
-  attr_accessible :address, :description, :name, :photo_urls
+  attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible
 
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocode, :process_photo_urls
 
   serialize :photo_urls
 
@@ -15,5 +15,11 @@ class Place < ActiveRecord::Base
 
   def gmaps4rails_infowindow
     "<h4>#{ERB::Util.html_escape name}</h4><p>#{ERB::Util.html_escape description}</p>"
+  end
+
+  private
+
+  def process_photo_urls
+    self.photo_urls = self.photo_urls.split("\n") if self.photo_urls.is_a? String
   end
 end

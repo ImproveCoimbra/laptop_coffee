@@ -3,8 +3,7 @@ class FrontController < ApplicationController
 
   # GET /
   def index
-    @places = Place.all
-    @json = Place.all.to_gmaps4rails do |place, marker|
+    @json = Place.where(:visible => true).to_gmaps4rails do |place, marker|
       marker.json({ :id => place.name, :foo => place.address })
       #marker.picture({
       #  :picture => "http://bundlr.com/images/favicon.png",
