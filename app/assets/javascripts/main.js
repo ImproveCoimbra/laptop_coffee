@@ -2,7 +2,7 @@
 jQuery(function ($) {
     "use strict";
 
-    var jQueryCache, headerHeight, featuresHeight, ajdustSize;
+    var jQueryCache, headerHeight, featuresHeight, ajdustSize, lastHeight;
 
     jQueryCache = {
         'window' : $(window),
@@ -15,9 +15,18 @@ jQuery(function ($) {
     featuresHeight = jQueryCache.featuresContainer.outerHeight();
 
     ajdustSize = function () {
-        var height;
+        var height, windowHeight;
 
-        height = jQueryCache.window.height() - headerHeight - featuresHeight;
+        windowHeight = jQueryCache.window.height();
+
+        if (windowHeight === lastHeight) {
+            //If the height does not change bail out
+            return;
+        }
+
+        lastHeight = windowHeight;
+
+        height = windowHeight - headerHeight - featuresHeight;
 
         jQueryCache['.overallMap, .gmaps4rails_map'].css('height', height + 'px');
     };
@@ -29,5 +38,6 @@ jQuery(function ($) {
         Gmaps.map.adjustMapToBounds();
     }
 
+    //Probably we should throtle this
     jQueryCache.window.bind('resize', ajdustSize);
 });
