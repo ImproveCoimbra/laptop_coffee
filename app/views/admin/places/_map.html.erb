@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag 'gmaps4rails' %>
+<%= gmaps({
+        "map_options" => { "auto_zoom" => false, "zoom" => 15 },
+        "markers"     => { "data" => markers },
+        })
+%>
+<%= yield :scripts %>

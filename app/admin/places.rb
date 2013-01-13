@@ -21,6 +21,7 @@ ActiveAdmin.register Place do
       row :name
       row :visible
       row :address
+      row :computed_location do |s| render "map", { :markers => s.to_gmaps4rails }; end
       row :latitude
       row :longitude
       row :description

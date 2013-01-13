@@ -27,3 +27,21 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+
+@import "gmaps4rails";
+
+.active_admin .map_container {
+  padding: 0px;
+  border-width: 0px;
+  width: 400px !important;
+  height: 200px !important;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.active_admin .map_container .gmaps4rails_map {
+    width: 400px;
+    height: 200px;
+}
