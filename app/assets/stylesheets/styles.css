@@ -33,6 +33,11 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
     height: 500px;
 }
 
+.bellowTheFold {
+    background-color: #00C800;
+    color: white;
+}
+
 .treeColumns {
     text-align: center;
 }
@@ -57,6 +62,10 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 .featuresContainer  [class*=" icon-"], .featuresContainer [class^="icon-"] {
     vertical-align: middle;
     margin-bottom: 7px;
+}
+
+.featuresDescContainer {
+    padding-top: 20px;
 }
 
 .descriptionContainer {
