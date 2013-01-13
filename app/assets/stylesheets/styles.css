@@ -143,7 +143,7 @@ footer {
 
 @media (max-width: 925px) {
     .featuresContainer > span {
-        width: 100%;
+        width: auto;
     }
 
     .featuresDescContainer > span {
@@ -152,5 +152,10 @@ footer {
 
     .beNiceDescContainer  > span {
         width: 100%;
+    }
+
+    .beNiceContainer, .sobreContainer {
+        margin-bottom: 5px;
+        margin-top: 15px;
     }
 }
