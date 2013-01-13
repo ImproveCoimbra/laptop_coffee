@@ -88,7 +88,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .beNiceContainer {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .beNiceDescContainer > span {
@@ -97,7 +97,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .sobreContainer {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .descriptionContainer {
@@ -148,14 +148,20 @@ footer {
 
     .featuresDescContainer > span {
         width: 100%;
+        line-height: 35px;
     }
 
     .beNiceDescContainer  > span {
         width: 100%;
+        line-height: 35px;
     }
 
     .beNiceContainer, .sobreContainer {
         margin-bottom: 5px;
         margin-top: 15px;
+    }
+
+    .descriptionContainer > span {
+        line-height: 35px;
     }
 }
