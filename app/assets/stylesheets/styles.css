@@ -142,7 +142,7 @@ footer {
 }
 
 
-@media (max-width: 1320px) {
+@media (max-width: 900px) {
     .featuresContainer > span {
         width: auto;
     }
