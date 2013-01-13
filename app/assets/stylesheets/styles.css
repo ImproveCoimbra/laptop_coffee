@@ -76,6 +76,10 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
     width: 600px;
 }
 
+.beNiceDescContainer > span {
+    vertical-align: top;
+}
+
 .descriptionContainer {
     text-align: center;
 }
