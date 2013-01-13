@@ -42,8 +42,10 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 }
 
 .treeColumns > span{
-    width: 300px;
+    width: 370px;
     display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .subTitle {
@@ -78,7 +80,6 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 }
 
 .featuresDescContainer {
-    padding-top: 20px;
     border-top: dashed 1px #979788;
 }
 
@@ -88,7 +89,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .beNiceContainer {
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .beNiceDescContainer > span {
@@ -97,7 +98,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .sobreContainer {
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .descriptionContainer {
@@ -106,7 +107,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .descriptionContainer > span {
     display: inline-block;
-    width: 600px;
+    width: 800px;
     margin-bottom: 20px;
 }
 
@@ -141,7 +142,7 @@ footer {
 }
 
 
-@media (max-width: 925px) {
+@media (max-width: 1320px) {
     .featuresContainer > span {
         width: auto;
     }
