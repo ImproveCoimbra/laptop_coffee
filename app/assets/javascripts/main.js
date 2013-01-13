@@ -40,4 +40,22 @@ jQuery(function ($) {
 
     //Probably we should throtle this
     jQueryCache.window.bind('resize', ajdustSize);
+
+
+    //Geolocation success callback
+    Gmaps.map.geolocationSuccess = function () {
+        Gmaps.map.createMarker({
+           Lat: Gmaps.map.userLocation.lat(),
+           Lng: Gmaps.map.userLocation.lng(), 
+           rich_marker: null, 
+           marker_picture: "/assets/my_position_marker.png",
+           marker_width: 16,
+           marker_height: 16,
+           marker_anchor: null,
+           shadow_anchor: null,
+           shadow_picture: null,
+           shadow_width: null,
+           shadow_height: null,
+        });
+    };
 });

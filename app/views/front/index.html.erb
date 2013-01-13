@@ -1,5 +1,5 @@
 <div class="overallMap">
-  <%= gmaps(:markers => {"data" => @json}, "map_options" => {:raw => "{scrollwheel: false}"}) %>
+  <%= gmaps(:markers => {"data" => @json}, "map_options" => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
 </div>
 
 <div class="treeColumns featuresContainer">
