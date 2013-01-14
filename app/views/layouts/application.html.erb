@@ -25,7 +25,7 @@
         <% if Rails.env == 'production' %>
           <script type="text/javascript">
             var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', '<%= ENV["GOOGLE_ANALYTICS_ID"] %>');
+            _gaq.push(['_setAccount', '<%= ENV["GOOGLE_ANALYTICS_ID"] %>']);
             _gaq.push(['_trackPageview']);
 
             (function() {
