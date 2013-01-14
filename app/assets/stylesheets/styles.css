@@ -16,14 +16,15 @@ header {
 header [class^="icon-"], header [class*=" icon-"] {
     vertical-align: middle;
     margin-bottom: 7px;
-    -webkit-transition: opacity 350ms;
-    transition: opacity 350ms;
+}
+
+header [class^="icon-"], header [class*=" icon-"] {    
+    -webkit-transition: opacity 200ms;
+    transition: opacity 200ms;
     opacity: 0.7;
 }
 
-header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
-    vertical-align: middle;
-    margin-bottom: 7px;
+header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     opacity: 1;
 }
 
@@ -35,17 +36,6 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 }
 
 .bellowTheFold {
-}
-
-.treeColumns {
-    text-align: center;
-}
-
-.treeColumns > span{
-    width: 27%;
-    display: inline-block;
-    margin-left: 2%;
-    margin-right: 2%;
 }
 
 .subTitle {
@@ -71,7 +61,7 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
     text-align: center;
     height: 50px;
     line-height: 50px;
-    font-size: 17px;
+    font-size: 22px;
 }
 
 .featuresContainer  [class*=" icon-"], .featuresContainer [class^="icon-"] {
@@ -81,19 +71,48 @@ header [class^="icon-"]:hover, header [class*=" icon-"]:hover {
 
 .featuresDescContainer {
     border-top: dashed 1px #979788;
+    padding-bottom: 25px;
 }
 
 .featuresDescContainer > span {
     vertical-align: top;
+    padding: 10px 20px;
+}
+
+.beNiceArea {
+    background-color: #f7f7f9;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .beNiceContainer {
-    margin-bottom: 10px;
-    margin-top: 100px;
+    padding-top: 25px;
+    margin-bottom: 20px;
 }
 
 .beNiceDescContainer > span {
     vertical-align: top;
+    padding: 10px 20px;
+}
+
+.beNiceDescContainer > span > b {
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    width: 15%;
+    max-width: 22px;
+}
+
+.beNiceDescContainer > span > p {
+    float: left;
+    display: inline-block;
+    width: 85%;
+    margin-bottom: 0px;
+}
+
+.beNiceDescContainer {
+    padding-bottom: 25px;
 }
 
 .sobreContainer {
@@ -115,6 +134,22 @@ footer {
     text-align: center;
     font-family: 'Verdana', sans-serif;
     font-size: 11px;
+    margin-top: 25px;
+}
+
+footer a {
+    color: gray;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+footer .alert {
+    margin-bottom: 0px;
+    border-color: rgb(238, 217, 176);
+    border-radius: 0px;
 }
 
 /* Gmaps4rails + Bootstrap controllers fix */
@@ -141,7 +176,7 @@ footer {
     width: 100%;
 }
 
-
+/*
 @media (max-width: 900px) {
     .featuresContainer > span {
         width: auto;
@@ -164,5 +199,26 @@ footer {
 
     .descriptionContainer > span {
         line-height: 35px;
+    }
+}
+*/
+
+@media (max-width: 500px) {
+    .beNiceDescContainer > span > p {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .row-fluid > span {
+        padding: 10px 10px;
+    }
+
+    .featuresContainer > span {
+        line-height: 20px;
+    }
+
+    .featuresContainer i {
+        display: block;
+        margin: auto;
     }
 }

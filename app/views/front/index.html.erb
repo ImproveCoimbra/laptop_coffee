@@ -2,48 +2,51 @@
   <%= gmaps(:markers => {"data" => @json}, "map_options" => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
 </div>
 
-<div class="treeColumns featuresContainer">
-    <span>
+<div class="featuresContainer row-fluid">
+    <span class="span4">
         Wifi <i class="icon-ok-sign"></i>
     </span>
-    <span>
+    <span class="span4">
         Tomadas <i class="icon-ok-sign"></i>
     </span>
-    <span>
+    <span class="span4">
         Acolhimento <i class="icon-ok-sign"></i>
     </span>
 </div>
 
-<div class="treeColumns featuresDescContainer bellowTheFold">
-    <span>
+<div class="featuresDescContainer bellowTheFold row-fluid">
+    <span class="span4">
         Os cafés selecionados têm wifi gratuito disponível para os clientes.
     </span>
-    <span>
+    <span class="span4">
         Existe um número razoável de tomadas públicas.
     </span>
-    <span>
+    <span class="span4">
         Pessoas que queiram passar a tarde a trabalhar são bem recebidas.
     </span>
 </div>
 
-<div class="subTitle beNiceContainer bellowTheFold">
-    <span class="lead">
-        <i class="icon-star"></i> Sê simpático! <i class="icon-star"></i>
-    </span>
+<div class="beNiceArea">
+  <div class="subTitle beNiceContainer bellowTheFold">
+      <span class="lead">
+          <i class="icon-star"></i> Sê simpático! <i class="icon-star"></i>
+      </span>
+  </div>
+
+  <div class="beNiceDescContainer bellowTheFold row-fluid">
+      <span class="span4">
+          <b>1.</b> <p>Retribui consumindo durante o teu tempo de permanência.</p>
+      </span>
+      <span class="span4">
+          <b>2.</b> <p>Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
+      </span>
+      <span class="span4">
+          <b>3.</b> <p>Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
+      </span>
+  </div>
 </div>
 
-<div class="treeColumns beNiceDescContainer bellowTheFold">
-    <span>
-        Retribui consumindo durante o teu tempo de permanência.
-    </span>
-    <span>
-        Evita as horas de maior afluência, como as horas de almoço e de jantar.
-    </span>
-    <span>
-        Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).
-    </span>
-</div>
-
+<% if false %>
 <div class="subTitle sobreContainer bellowTheFold">
     <span class="lead">
         <i class="icon-info-sign"></i> Sobre <i class="icon-info-sign"></i>
@@ -56,3 +59,4 @@
         <!--<p>Podes sugerir novos locais enviando um email para <a href="mailto:random@email.com">aqui</a>.</p>-->
     </span>
 </div>
+<% end %>
