@@ -77,6 +77,8 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
 .featuresDescContainer > span {
     vertical-align: top;
     padding: 10px 20px;
+    font-family: "Verdana", sans-serif;
+    font-size: 13px;
 }
 
 .beNiceArea {
@@ -93,11 +95,14 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
 .beNiceDescContainer > span {
     vertical-align: top;
     padding: 10px 20px;
+    font-family: "Verdana", sans-serif;
+    font-size: 13px;
 }
 
 .beNiceDescContainer > span > b {
     float: left;
-    font-size: 22px;
+    font-size: 15px;
+    line-height: 16px;
     font-weight: bold;
     display: inline-block;
     width: 15%;
