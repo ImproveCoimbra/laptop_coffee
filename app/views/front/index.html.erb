@@ -1,6 +1,7 @@
 <div class="overallMap">
-  <%= gmaps(:markers => {"data" => @json}, "map_options" => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
+  <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers_list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
 </div>
+  <ul id="markers_list">  </ul>
 
 <div class="featuresContainer row-fluid">
     <span class="span4">
