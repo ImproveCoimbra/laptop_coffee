@@ -1,6 +1,6 @@
 === Live Website (beta)
 
-http://cafewifi.madeincoimbra.org/
+http://cafewifi.madeincoimbra.org
 
 === About
 
