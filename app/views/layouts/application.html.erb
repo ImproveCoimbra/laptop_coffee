@@ -3,53 +3,53 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="Encontra cafés em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.">
-        <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Encontra cafés em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <title>Portáteis ♥ Cafés ♥ Coimbra</title>
-        <%= stylesheet_link_tag    "application", :media => "all" %>
-        <%= javascript_include_tag "application" %>
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+    <title>Portáteis ♥ Cafés ♥ Coimbra</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-        <% if Rails.env == 'production' %>
-          <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', '<%= ENV["GOOGLE_ANALYTICS_ID"] %>']);
-            _gaq.push(['_trackPageview']);
+    <% if Rails.env == 'production' %>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%= ENV["GOOGLE_ANALYTICS_ID"] %>']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-          </script>
-        <% end %>
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    <% end %>
 
-        <header>
-            Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra
-        </header>
+    <header>
+      Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra
+    </header>
 
-        <% if notice %><p class="notice"><%= notice %></p><% end %>
-        <% if alert %><p class="alert"><%= alert %></p><% end %>
+    <% if notice %><p class="notice"><%= notice %></p><% end %>
+    <% if alert %><p class="alert"><%= alert %></p><% end %>
 
-        <%= yield %>
+    <%= yield %>
 
-        <footer class="bellowTheFold">
-          <p><a href="http://improve.madeincoimbra.org/">Improve Coimbra! 2013</a></p>
-          <p class="alert" style="text-align: center">Esta é uma versão experimental do site. Ainda há muito a fazer :) Sabes de mais cafés assim? <a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Envia-nos um mail.</a></p>
-        </footer>
+    <footer class="bellowTheFold">
+      <p><a href="http://improve.madeincoimbra.org/">Improve Coimbra! 2013</a></p>
+      <p class="alert" style="text-align: center">Esta é uma versão experimental do site. Ainda há muito a fazer :) Sabes de mais cafés assim? <a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Envia-nos um mail.</a></p>
+    </footer>
 
-        <%= yield :scripts %>
-    </body>
+    <%= yield :scripts %>
+  </body>
 </html>

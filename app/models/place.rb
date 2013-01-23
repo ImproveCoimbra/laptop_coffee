@@ -1,11 +1,14 @@
 class Place < ActiveRecord::Base
   attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible
 
-  geocoded_by :address
-  after_validation :geocode, :process_photo_urls
-
   serialize :photo_urls
+  after_validation :process_photo_urls
+  
+  # Ruby Geocoder
+  geocoded_by :address
+  after_validation :geocode, :if => lambda{ |obj| obj.address_changed? }
 
+  # Gmaps4Rails
   acts_as_gmappable
 
   def gmaps4rails_address

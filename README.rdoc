@@ -1,6 +1,6 @@
 === Live Website (beta)
 
-http://laptop-coffee.herokuapp.com
+http://cafewifi.madeincoimbra.org
 
 === About
 
