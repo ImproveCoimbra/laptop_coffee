@@ -1,7 +1,14 @@
-<div class="overallMap">
-  <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers_list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
+<div class="row-fluid data-wrapper">
+  <div class="span2 list-wrapper">
+    <ul id="markers-list" class="nav nav-tabs nav-stacked"></ul>
+  </div>
+
+  <div class="span10 map-wrapper">
+    <div class="overallMap">
+      <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }, :do_clustering => true}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
+    </div>
+  </div>
 </div>
-  <ul id="markers_list">  </ul>
 
 <div class="featuresContainer row-fluid">
   <span class="span4">
