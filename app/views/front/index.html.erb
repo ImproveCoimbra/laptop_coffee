@@ -5,7 +5,7 @@
 
   <div class="span10 map-wrapper">
     <div class="overallMap">
-      <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }, :do_clustering => true}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
+      <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
     </div>
   </div>
 </div>
