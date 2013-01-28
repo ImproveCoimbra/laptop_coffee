@@ -156,7 +156,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   geocoder
   gmaps4rails
-  jquery-rails
+  jquery-rails (= 2.1.4)
   json
   pg
   rails (= 3.2.11)
