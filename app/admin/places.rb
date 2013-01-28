@@ -4,11 +4,11 @@ ActiveAdmin.register Place do
 
   index do
     selectable_column
-    column :name  do |s| link_to s.name, admin_place_path(s) end
+    column :name, :sortable => :name do |s| link_to s.name, admin_place_path(s) end
     column :address
-    column :latitude
-    column :longitude
-    column :'Homepage?' do |s| s.visible end
+    #column :latitude
+    #column :longitude
+    column :'Homepage?', :sortable => :visible do |s| s.visible end
     default_actions
     #column { |sighting| link_to('Approve', approve_admin_sighting_path(sighting), :method => :put) unless sighting.approved? }
   end
@@ -37,8 +37,8 @@ ActiveAdmin.register Place do
     f.inputs do
       f.input :name
       f.input :address
-      f.input :latitude unless f.object.new_record?
-      f.input :longitude unless f.object.new_record?
+      f.input :latitude, :as => :string unless f.object.new_record?
+      f.input :longitude, :as => :string unless f.object.new_record?
       f.input :description
       f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }
       f.input :visible
@@ -96,5 +96,15 @@ ActiveAdmin.register Place do
       redirect_to params[:next], :notice => "Place hidden from the Homepage."
     end
   end
+
+  # Filters
+
+  filter :visible, :as => :select
+  filter :name
+  filter :description
+  filter :photo_urls
+  filter :created_at
+  filter :updated_at
+  filter :gmaps, :as => :select
 
 end
