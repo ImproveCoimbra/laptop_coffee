@@ -17,7 +17,7 @@ class Place < ActiveRecord::Base
   end
 
   def gmaps4rails_infowindow
-    "<h3>#{ERB::Util.html_escape name}</h3><p>#{ERB::Util.html_escape description}</p>"
+    "<h3>#{ERB::Util.html_escape name}</h3>" #+ "<p>#{ERB::Util.html_escape description}</p>"
   end
 
   private
