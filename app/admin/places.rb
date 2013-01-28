@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 ActiveAdmin.register Place do
   
   config.sort_order = "name_asc"
