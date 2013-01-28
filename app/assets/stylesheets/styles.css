@@ -47,7 +47,7 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
 
 .row-fluid.data-wrapper .list-wrapper {
     position: relative;
-    overflow: scroll;
+    overflow: auto;
     height: 500px;
     width: 15%;
     background-color: white;
@@ -57,6 +57,7 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     position: absolute;
     font-family: 'Verdana', sans-serif;
     font-size: 11px;
+    margin-bottom: 0px;
 }
 
 #markers-list a {
@@ -275,6 +276,16 @@ footer .alert {
 }
 */
 
+@media (max-width: 900px) {
+    .row-fluid.data-wrapper .list-wrapper {
+        width: 25%;
+    }
+
+    .row-fluid.data-wrapper .map-wrapper {
+        width: 75%;
+    }
+}
+
 @media (max-width: 500px) {
     .beNiceDescContainer > span > p {
         width: 100%;
@@ -292,5 +303,17 @@ footer .alert {
     .featuresContainer i {
         display: block;
         margin: auto;
+    }
+
+    .row-fluid.data-wrapper .list-wrapper {
+        width: 35%;
+    }
+
+    .row-fluid.data-wrapper .map-wrapper {
+        width: 65%;
+    }
+
+    header {
+        font-size: 25px;
     }
 }
