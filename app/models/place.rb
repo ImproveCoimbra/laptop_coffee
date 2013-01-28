@@ -1,8 +1,11 @@
 class Place < ActiveRecord::Base
-  attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible
+  attr_accessible :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible, :info_url
 
   serialize :photo_urls
   after_validation :process_photo_urls
+
+  validates :info_url, :format => { :with => /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix, :allow_blank => true }
+  validates :name, :address, :presence => true
   
   # Ruby Geocoder
   geocoded_by :address

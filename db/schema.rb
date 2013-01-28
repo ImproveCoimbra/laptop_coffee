@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113151945) do
+ActiveRecord::Schema.define(:version => 20130128180816) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20130113151945) do
     t.float    "longitude"
     t.boolean  "gmaps"
     t.boolean  "visible",     :default => false
+    t.string   "info_url"
   end
 
 end

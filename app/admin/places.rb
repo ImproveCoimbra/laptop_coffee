@@ -8,6 +8,7 @@ ActiveAdmin.register Place do
     column :address
     #column :latitude
     #column :longitude
+    column 'URL' do |s| link_to "Info»", s.info_url, :title => s.info_url, :target => '_blank' if s.info_url? end
     column :'Homepage?', :sortable => :visible do |s| s.visible end
     default_actions
     #column { |sighting| link_to('Approve', approve_admin_sighting_path(sighting), :method => :put) unless sighting.approved? }
@@ -24,6 +25,7 @@ ActiveAdmin.register Place do
       row :computed_location do |s| render "map", { :markers => s.to_gmaps4rails }; end
       row :latitude
       row :longitude
+      row :info_url do link_to s.info_url, s.info_url, :target => '_blank' if s.info_url? end
       row :description
       row :photo_urls do |s| s.photo_urls.map {|u| link_to image_tag(u), u}.join(" ").html_safe end
       row :created_at
@@ -39,6 +41,7 @@ ActiveAdmin.register Place do
       f.input :address
       f.input :latitude, :as => :string unless f.object.new_record?
       f.input :longitude, :as => :string unless f.object.new_record?
+      f.input :info_url, :as => :url
       f.input :description
       f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }
       f.input :visible
@@ -101,6 +104,7 @@ ActiveAdmin.register Place do
 
   filter :visible, :as => :select
   filter :name
+  filter :info_url
   filter :description
   filter :photo_urls
   filter :created_at
