@@ -6,11 +6,23 @@ body {
 }
 
 header {
-    font-size: 30px;
-    text-align: center;
-    line-height: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+}
+
+header .fb-like {
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+
+header iframe {
+    width: 100px;
+    height: 20px;
+    margin-top: 5px;
 }
 
 header [class^="icon-"], header [class*=" icon-"] {
@@ -286,7 +298,7 @@ footer .alert {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .beNiceDescContainer > span > p {
         width: 100%;
         margin-top: 5px;
@@ -315,5 +327,30 @@ footer .alert {
 
     header {
         font-size: 25px;
+        text-align: left;
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 402px) {
+    header {
+        text-align: center;
+        line-height: 22px;
+    }
+
+    header .fb-like {
+        position: relative;
+    }
+
+    header iframe {
+        margin-top: 0px;
+    }
+
+    .featuresContainer > span.span4 {
+        font-size: 18px;
+    }
+
+    body {
+        font-size: 10px;
     }
 }
