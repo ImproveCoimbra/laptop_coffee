@@ -70,6 +70,7 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     font-family: 'Verdana', sans-serif;
     font-size: 11px;
     margin-bottom: 0px;
+    width: 100%;
 }
 
 #markers-list a {
