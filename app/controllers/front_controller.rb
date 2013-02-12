@@ -6,7 +6,7 @@ class FrontController < ApplicationController
     @json = Place.where(:visible => true).order(:name).to_gmaps4rails do |place, marker|
       #marker.json({ :id => place.name, :foo => place.address })
       marker.picture({
-        :picture => "http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png",
+        :picture => ActionController::Base.helpers.asset_path('red-dot.png'),
         :width   => 32,
         :height  => 32,
         #:shadow_picture => "http://www.google.com/intl/en_us/mapfiles/ms/micons/msmarker.shadow.png",

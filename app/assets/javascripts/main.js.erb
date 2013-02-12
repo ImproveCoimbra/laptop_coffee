@@ -67,13 +67,13 @@ jQuery(function ($) {
 
     for (var i = 0; i <  this.markers.length; ++i) {
       google.maps.event.addListener(Gmaps.map.markers[i].serviceObject, 'mouseover', function() {
-        this.setIcon('http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png');
+        this.setIcon("<%= asset_path('blue-dot.png') %>");
         //if (this.getAnimation() == null)
         //  this.setAnimation(google.maps.Animation.BOUNCE);
       });
 
       google.maps.event.addListener(Gmaps.map.markers[i].serviceObject, 'mouseout', function() {
-        this.setIcon('http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png');
+        this.setIcon("<%= asset_path('red-dot.png') %>");
         //this.setAnimation(null);
       });
 
@@ -89,13 +89,13 @@ jQuery(function ($) {
     var marker = Gmaps.map.markers[i].serviceObject;
     //if (marker.getAnimation() == null)
       //marker.setAnimation(google.maps.Animation.BOUNCE);
-    marker.setIcon('http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png');
+    marker.setIcon("<%= asset_path('blue-dot.png') %>");
   });
 
   $("#markers-list li").live("mouseout", function(){
     var i = $(this).index();
     var marker = Gmaps.map.markers[i].serviceObject;
     //marker.setAnimation(null);
-    marker.setIcon('http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png');
+    marker.setIcon("<%= asset_path('red-dot.png') %>");
   });
 });
