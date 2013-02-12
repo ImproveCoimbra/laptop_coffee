@@ -1,69 +1,42 @@
-<div class="row-fluid data-wrapper">
-  <div class="span2 list-wrapper">
+<div class="row data-wrapper">
+  <div class="list-wrapper">
     <ul id="markers-list" class="nav nav-tabs nav-stacked"></ul>
   </div>
 
-  <div class="span10 map-wrapper">
+  <div class="map-wrapper">
     <div class="overallMap">
       <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
     </div>
   </div>
 </div>
 
-<div class="featuresContainer row-fluid">
-  <span class="span4">
-    Wi-fi <i class="icon-ok-sign"></i>
-  </span>
-  <span class="span4">
-    Tomadas <i class="icon-ok-sign"></i>
-  </span>
-  <span class="span4">
-    Acolhimento <i class="icon-ok-sign"></i>
-  </span>
-</div>
-
-<div class="featuresDescContainer bellowTheFold row-fluid">
-  <span class="span4">
-    Os cafés selecionados têm wifi gratuito disponível para os clientes.
-  </span>
-  <span class="span4">
-    Existe um número razoável de tomadas públicas.
-  </span>
-  <span class="span4">
-    Pessoas que queiram passar a tarde a trabalhar são bem recebidas.
-  </span>
-</div>
-
-<div class="beNiceArea">
-  <div class="subTitle beNiceContainer bellowTheFold">
-      <span class="lead">
-          <i class="icon-star"></i> Sê simpático! <i class="icon-star"></i>
-      </span>
+<div id="features-section" class="row-fluid section">
+  <div>
+    <h4>Wi-fi <i class="icon-ok-sign"></i></h4>
+    <p>Os cafés selecionados têm wifi gratuito disponível para os clientes.</p>
   </div>
-
-  <div class="beNiceDescContainer bellowTheFold row-fluid">
-    <span class="span4">
-      <b>1.</b> <p>Retribui consumindo durante o teu tempo de permanência.</p>
-    </span>
-    <span class="span4">
-      <b>2.</b> <p>Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
-    </span>
-    <span class="span4">
-      <b>3.</b> <p>Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
-    </span>
+  <div>
+    <h4>Tomadas <i class="icon-ok-sign"></i></h4>
+    <p>Existe um número razoável de tomadas públicas.</p>
+  </div>
+  <div>
+    <h4>Acolhimento <i class="icon-ok-sign"></i></h4>
+    <p>Pessoas que queiram passar a tarde a trabalhar são bem recebidas.</p>
   </div>
 </div>
 
-<% if false %>
-<div class="subTitle sobreContainer bellowTheFold">
-  <span class="lead">
-    <i class="icon-info-sign"></i> Sobre <i class="icon-info-sign"></i>
-  </span>
+<div id="ethics-section" class="row-fluid section">
+  <h4><i class="icon-star"></i> Sê simpático! <i class="icon-star"></i></h4>
+  
+  <div class="row-fluid">
+    <span class="span4">
+      <p><b>1.</b> Retribui consumindo durante o teu tempo de permanência.</p>
+    </span>
+    <span class="span4">
+      <p><b>2.</b> Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
+    </span>
+    <span class="span4">
+      <p><b>3.</b> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
+    </span>
+  </div>
 </div>
-
-<div class="descriptionContainer bellowTheFold">
-  <span>
-    <p>Encontra cafés em Coimbra onde podes trabalhar ou estudar, e que esteja apto à utilização de portáteis.</p>
-  </span>
-</div>
-<% end %>

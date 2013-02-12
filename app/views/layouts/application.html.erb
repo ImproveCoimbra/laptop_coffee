@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
 
     <meta name="description" content="Encontra cafés em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.">
@@ -43,10 +43,12 @@
       </script>
     <% end %>
 
-    <header>
-      Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra
-      <div class="fb-like">
-        <iframe src="http://www.facebook.com/plugins/like.php?href=http://cafewifi.madeincoimbra.org&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+    <header class="row-fluid">
+      <div class="span12">
+        <h1>Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra</h1>
+        <div class="fb-like">
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http://cafewifi.madeincoimbra.org&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+        </div>
       </div>
     </header>
 
@@ -55,7 +57,7 @@
 
     <%= yield %>
 
-    <footer class="bellowTheFold">
+    <footer>
       <p><a href="http://improve.madeincoimbra.org/">Improve Coimbra! 2013</a></p>
       <p class="alert" style="text-align: center">Esta é uma versão experimental do site. Ainda há muito a fazer :) Sabes de mais cafés assim? <a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Envia-nos um mail.</a></p>
     </footer>

@@ -1,29 +1,14 @@
-body {
-    padding-left: 0px;
-    padding-right: 0px;
-    font-family: 'Garamond', serif;
-    font-size: 17px;
-}
 
-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+/* Header */
+
+header h1 {
+    font-size: 1.5em;
+    line-height: 1em;
+    padding-top: 5px;
     text-align: center;
-    position: relative;
-    font-size: 30px;
 }
 
-header .fb-like {
-    position: absolute;
-    top: 7px;
-    right: 0;
-}
-
-header iframe {
-    width: 100px;
-    height: 20px;
-    margin-top: 5px;
-}
+/* Header heart images */
 
 header [class^="icon-"], header [class*=" icon-"] {
     vertical-align: middle;
@@ -40,35 +25,38 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     opacity: 1;
 }
 
+/* Facebook Like Button */
 
-
-.overallMap {
-    width: 100%;
-    height: 500px;
-    border-left: solid 1px gray;
+header .fb-like {
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
 
-.overallMap:hover {
-    cursor: hand;
+header iframe {
+    width: 100px;
+    height: 20px;
+    margin-top: 5px;
 }
+
+/* List of places */
 
 .data-wrapper {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
 
-.row-fluid.data-wrapper .list-wrapper {
+.row.data-wrapper .list-wrapper {
     position: relative;
     overflow: auto;
-    height: 500px;
     width: 14.9%;
+    height: 500px;
     background-color: white;
 }
 
 #markers-list {
     position: absolute;
-    font-family: 'Verdana', sans-serif;
-    font-size: 11px;
+    font-size: 0.9em;
     margin-bottom: 0px;
     width: 100%;
 }
@@ -78,24 +66,8 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     color: rgb(0, 123, 184);
 }
 
-/*#markers-list li.active a {
-    color: #ffffff;
-    background-color: #0088cc;
-}*/
-
 #markers-list:hover {
     cursor: pointer;
-}
-
-#markers-list .icon-chevron-right {
-    float: right;
-    margin-top: 1px;
-    margin-right: -6px;
-    opacity: .25;
-}
-
-#markers-list a:hover .icon-chevron-right {
-    opacity: .5;
 }
 
 .nav-tabs.nav-stacked > li {
@@ -114,131 +86,43 @@ header:hover [class^="icon-"], header:hover [class*=" icon-"] {
     border-top: 0px;
 }
 
-.row-fluid.data-wrapper .map-wrapper {
+/* List of spaces - Chevron */
+
+#markers-list .icon-chevron-right {
+    float: right;
+    margin-top: 1px;
+    margin-right: -6px;
+    opacity: .25;
+}
+
+#markers-list a:hover .icon-chevron-right {
+    opacity: .5;
+}
+
+/* Map */
+
+.row.data-wrapper .map-wrapper {
     width: 85%;
-    margin-left: 0px;
 }
 
-.bellowTheFold {
+.overallMap {
+    width: 100%;
+    height: 500px;
+    border-left: solid 1px gray;
 }
 
-.subTitle {
-    text-align: center;
+.overallMap:hover {
+    cursor: hand;
 }
 
-.subTitle > span{
-    font-size: 30px;
-}
-
-.subTitle [class*=" icon-"], .subTitle [class^="icon-"] {
-    vertical-align: middle;
-    margin-bottom: 7px;
-}
-
-.featuresContainer {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 30px;
-}
-
-.featuresContainer > span{
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-    font-size: 22px;
-}
-
-.featuresContainer  [class*=" icon-"], .featuresContainer [class^="icon-"] {
-    vertical-align: middle;
-    margin-bottom: 7px;
-}
-
-.featuresDescContainer {
-    border-top: dashed 1px #979788;
-    padding-bottom: 25px;
-}
-
-.featuresDescContainer > span {
-    vertical-align: top;
-    padding: 10px 20px;
-    font-family: "Verdana", sans-serif;
-    font-size: 13px;
-}
-
-.beNiceArea {
-    background-color: #f7f7f9;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-}
-
-.beNiceContainer {
-    padding-top: 25px;
-    margin-bottom: 20px;
-}
-
-.beNiceDescContainer > span {
-    vertical-align: top;
-    padding: 10px 20px;
-    font-family: "Verdana", sans-serif;
-    font-size: 13px;
-}
-
-.beNiceDescContainer > span > b {
+.row.data-wrapper .list-wrapper, .row.data-wrapper .map-wrapper {
+    display: block;
     float: left;
-    font-size: 15px;
-    line-height: 16px;
-    font-weight: bold;
-    display: inline-block;
-    width: 15%;
-    max-width: 22px;
-}
-
-.beNiceDescContainer > span > p {
-    float: left;
-    display: inline-block;
-    width: 85%;
-    margin-bottom: 0px;
-}
-
-.beNiceDescContainer {
-    padding-bottom: 25px;
-}
-
-.sobreContainer {
-    margin-bottom: 10px;
-    margin-top: 100px;
-}
-
-.descriptionContainer {
-    text-align: center;
-}
-
-.descriptionContainer > span {
-    display: inline-block;
-    width: 800px;
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    font-family: 'Verdana', sans-serif;
-    font-size: 11px;
-    margin-top: 25px;
-}
-
-footer a {
-    color: gray;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #333;
-}
-
-footer .alert {
-    margin-bottom: 0px;
-    border-color: rgb(238, 217, 176);
-    border-radius: 0px;
+    min-height: 30px;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Gmaps4rails + Bootstrap controllers fix */
@@ -262,96 +146,162 @@ footer .alert {
     width: 100%;
 }
 
-/*
-@media (max-width: 900px) {
-    .featuresContainer > span {
-        width: auto;
-    }
+/* Generic Row Settings */
 
-    .featuresDescContainer > span {
-        width: 100%;
-        line-height: 35px;
-    }
-
-    .beNiceDescContainer  > span {
-        width: 100%;
-        line-height: 35px;
-    }
-
-    .beNiceContainer, .sobreContainer {
-        margin-bottom: 5px;
-        margin-top: 15px;
-    }
-
-    .descriptionContainer > span {
-        line-height: 35px;
-    }
-}
-*/
-
-@media (max-width: 900px) {
-    .row-fluid.data-wrapper .list-wrapper {
-        width: 25%;
-    }
-
-    .row-fluid.data-wrapper .map-wrapper {
-        width: 75%;
-    }
+.row-fluid.section {
+    padding-bottom: 25px;
 }
 
-@media (max-width: 600px) {
-    .beNiceDescContainer > span > p {
-        width: 100%;
-        margin-top: 5px;
+.row-fluid.section h4 {
+    text-align: center;
+}
+
+.row-fluid.section p {
+    padding: 10px 20px;
+}
+
+.row-fluid.section [class*=" icon-"], .row-fluid.section [class^="icon-"] {
+    vertical-align: baseline;
+}
+
+/* Features Row */
+
+#features-section p {
+    border-top: dashed 1px #979788;
+}
+
+#features-section div {
+    width: 33.3333330%;
+
+    display: block;
+    float: left;
+    min-height: 30px;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Ethics Row */
+
+#ethics-section {
+    background-color: #f7f7f9;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding-top: 20px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+
+    font-family: 'Verdana', sans-serif;
+    font-size: 11px;
+}
+
+footer a {
+    color: gray;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+footer .alert {
+    margin-bottom: 0px;
+    border-color: rgb(238, 217, 176);
+    border-radius: 0px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 900px) {
+    .row.data-wrapper .list-wrapper { width: 24.9%; }
+    .row.data-wrapper .map-wrapper  { width: 75%; }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+    body {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    .row-fluid > span {
-        padding: 10px 10px;
-    }
-
-    .featuresContainer > span {
-        line-height: 20px;
-    }
-
-    .featuresContainer i {
-        display: block;
-        margin: auto;
-    }
-
-    .row-fluid.data-wrapper .list-wrapper {
-        width: 35%;
-    }
-
-    .row-fluid.data-wrapper .map-wrapper {
-        width: 65%;
-    }
-
-    header {
-        font-size: 25px;
+     header h1 {
         text-align: left;
         margin-left: 12px;
     }
+
+    .row-fluid.section h4 {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .row-fluid.section p {
+        padding: 0px 20px;
+        padding-bottom: 0px;
+    }
+
+    #features-section p {
+        padding: 10px 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #features-section h4 {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    #ethics-section h4 {
+        line-height: 1.7em;
+    }
+
+    #ethics-section {
+        padding: 0px 0px 5px 0px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .row.data-wrapper .list-wrapper { width: 34.9%; }
+    .row.data-wrapper .map-wrapper  { width: 65%;   }
 }
 
 @media (max-width: 402px) {
-    header {
+    header, header h1 {
         text-align: center;
         line-height: 22px;
+        margin-left: 0px;
     }
 
     header .fb-like {
         position: relative;
+        top: 0;
     }
 
     header iframe {
-        margin-top: 0px;
+        margin-top: 2px;
     }
 
-    .featuresContainer > span.span4 {
-        font-size: 18px;
+    header h1 {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    .row-fluid.section h4 {
+        font-size: 16px;
     }
 
     body {
-        font-size: 10px;
+        font-size: 14px;
+    }
+
+    #features-section [class^="icon-"], #features-section [class*=" icon-"] {
+        display: none;
     }
 }

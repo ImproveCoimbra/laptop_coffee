@@ -8,17 +8,17 @@ jQuery(function ($) {
         'window' : $(window),
         '.overallMap, .gmaps4rails_map, .list-wrapper' : $('.overallMap, .gmaps4rails_map, .list-wrapper'),
         'header' : $('header'),
-        'featuresContainer' : $('.featuresContainer')
+        'featuresContainer' : $('#features-section h4')
     };
 
     headerHeight = jQueryCache.header.outerHeight();
-    featuresHeight = jQueryCache.featuresContainer.outerHeight();
+    featuresHeight = jQueryCache.featuresContainer.outerHeight(true);
 
     ajdustSize = function () {
         var height, windowHeight;
 
         windowHeight = jQueryCache.window.height();
-
+        
         if (windowHeight === lastHeight) {
             //If the height does not change bail out
             return;
