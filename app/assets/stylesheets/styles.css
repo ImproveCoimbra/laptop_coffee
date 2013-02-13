@@ -12,7 +12,10 @@ header h1 {
 
 header [class^="icon-"], header [class*=" icon-"] {
     vertical-align: middle;
-    margin-bottom: 7px;
+    font-size: 13px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
 }
 
 header [class^="icon-"], header [class*=" icon-"] {    
@@ -162,6 +165,7 @@ header iframe {
 
 .row-fluid.section [class*=" icon-"], .row-fluid.section [class^="icon-"] {
     vertical-align: baseline;
+    font-size: 14px;
 }
 
 /* Features Row */
