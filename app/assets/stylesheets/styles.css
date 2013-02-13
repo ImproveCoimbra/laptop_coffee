@@ -276,6 +276,7 @@ footer .alert {
     .row.data-wrapper .map-wrapper  { width: 65%;   }
 }
 
+/* iPhone and smaller devices */
 @media (max-width: 402px) {
     header, header h1 {
         text-align: center;
@@ -307,5 +308,10 @@ footer .alert {
 
     #features-section [class^="icon-"], #features-section [class*=" icon-"] {
         display: none;
+    }
+
+    .map_container h3 {
+        font-size: 1.4em;
+        line-height: 1.3em;
     }
 }
