@@ -52,6 +52,22 @@
       </div>
     </header>
 
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <%= nav_link 'Cafés', root_path %>
+          <%= nav_link 'Submeter', '#submit' %>
+          <%= nav_link 'Como Agir', '#' %>
+          <%= nav_link 'Sobre', '#' %>
+        </ul>
+
+        <form class="navbar-search pull-right">
+          <input type="text" class="search-query" placeholder="Pesquisar">
+        </form>
+      </div>
+    </div>
+
+
     <% if notice %><p class="notice"><%= notice %></p><% end %>
     <% if alert %><p class="alert"><%= alert %></p><% end %>
 

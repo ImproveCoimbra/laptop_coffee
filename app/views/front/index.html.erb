@@ -1,8 +1,4 @@
 <div class="row data-wrapper">
-  <div class="list-wrapper">
-    <ul id="markers-list" class="nav nav-tabs nav-stacked"></ul>
-  </div>
-
   <div class="map-wrapper">
     <div class="overallMap">
       <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
@@ -10,33 +6,34 @@
   </div>
 </div>
 
-<div id="features-section" class="row-fluid section">
-  <div>
-    <h4>Wi-fi <i class="icon-ok-sign"></i></h4>
-    <p>Os cafés selecionados têm wifi gratuito disponível para os clientes.</p>
+<div class="container">
+  <div id="features-section" class="row-fluid section">
+    <p>Os cafés selecionados têm wi-fi gratuito disponível para os clientes</p>
+    <p>Existe um número razoável de tomadas públicas</p>
+    <p>Pessoas que queiram passar a tarde a trabalhar são bem recebidas</p>
   </div>
-  <div>
-    <h4>Tomadas <i class="icon-ok-sign"></i></h4>
-    <p>Existe um número razoável de tomadas públicas.</p>
-  </div>
-  <div>
-    <h4>Acolhimento <i class="icon-ok-sign"></i></h4>
-    <p>Pessoas que queiram passar a tarde a trabalhar são bem recebidas.</p>
-  </div>
-</div>
 
-<div id="ethics-section" class="row-fluid section">
-  <h4><i class="icon-star"></i> Sê simpático! <i class="icon-star"></i></h4>
-  
-  <div class="row-fluid">
-    <span class="span4">
-      <p><b>1.</b> Retribui consumindo durante o teu tempo de permanência.</p>
-    </span>
-    <span class="span4">
-      <p><b>2.</b> Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
-    </span>
-    <span class="span4">
-      <p><b>3.</b> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
-    </span>
+  <!--
+
+  <div id="ethics-section" class="row-fluid section">
+    <h4><i class="icon-star"></i> Sê simpático! <i class="icon-star"></i></h4>
+
+    <div class="row-fluid">
+      <span class="span4">
+        <p><b>1.</b> Retribui consumindo durante o teu tempo de permanência.</p>
+      </span>
+      <span class="span4">
+        <p><b>2.</b> Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
+      </span>
+      <span class="span4">
+        <p><b>3.</b> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
+      </span>
+    </div>
+  </div>
+
+  -->
+
+  <div class="list-wrapper row-fluid section">
+    <ul id="markers-list" class="nav nav-tabs nav-stacked"></ul>
   </div>
 </div>
