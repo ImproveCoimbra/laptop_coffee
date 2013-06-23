@@ -1,39 +1,33 @@
-<div class="row data-wrapper">
-  <div class="map-wrapper">
-    <div class="overallMap">
-      <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
-    </div>
+<div class="map-wrapper">
+  <div class="search input-prepend">
+    <span class="add-on"><i class="icon-search"></i></span>
+    <input type="text" placeholder="Pesquisar">
+  </div>
+  
+  <div class="overallMap">
+    <%= gmaps(:markers => {:data => @json, :options => {:list_container => "markers-list" }}, :map_options => {:raw => "{scrollwheel: false}", :detect_location => true}) %>
   </div>
 </div>
 
-<div class="container">
-  <div id="features-section" class="row-fluid section">
-    <p>Os cafés selecionados têm wi-fi gratuito disponível para os clientes</p>
-    <p>Existe um número razoável de tomadas públicas</p>
-    <p>Pessoas que queiram passar a tarde a trabalhar são bem recebidas</p>
+<div id="features-section">
+  <div class="container lead">
+    <p><i class="icon-laptop"></i> Os cafés selecionados têm wifi gratuito disponível para os clientes</p>
+    <p><i class="icon-bolt"></i> Existe um número razoável de tomadas públicas</p>
+    <p><i class="icon-thumbs-up"></i> Pessoas que queiram passar a tarde a trabalhar são bem recebidas</p>
+    <div class="fb-like"><iframe src="http://www.facebook.com/plugins/like.php?href=http://cafewifi.madeincoimbra.org&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe></div>
   </div>
+</div>
 
-  <!--
-
-  <div id="ethics-section" class="row-fluid section">
-    <h4><i class="icon-star"></i> Sê simpático! <i class="icon-star"></i></h4>
-
-    <div class="row-fluid">
-      <span class="span4">
-        <p><b>1.</b> Retribui consumindo durante o teu tempo de permanência.</p>
-      </span>
-      <span class="span4">
-        <p><b>2.</b> Evita as horas de maior afluência, como as horas de almoço e de jantar.</p>
-      </span>
-      <span class="span4">
-        <p><b>3.</b> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc).</p>
-      </span>
-    </div>
+<div class="list">
+  <div class="container">
+    <ul id="markers-list" class="unstyled"></ul>
   </div>
+</div>
 
-  -->
-
-  <div class="list-wrapper row-fluid section">
-    <ul id="markers-list" class="nav nav-tabs nav-stacked"></ul>
+<div id="ethics-section">
+  <div class="container row-fluid">
+    <div class="span4"><i class="icon-coffee"></i><br> Retribui consumindo durante o teu tempo de permanência</div>
+    <div class="span4"><i class="icon-time"></i><br> Evita as horas de maior afluência, como as horas de almoço e de jantar</div>
+    <div class="span4"><i class="icon-refresh"></i><br> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc)</div>
   </div>
 </div>

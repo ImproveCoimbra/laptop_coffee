@@ -14,9 +14,12 @@ class FrontController < ApplicationController
         #:shadow_width => '40',
         #:shadow_anchor => ['-26px', '-32px'],
       })
-      marker.sidebar "<i class=\"icon-chevron-right\"></i> #{place.name}"
+      marker.sidebar "<li><div class='span3'><span class='place-name'>#{place.name}</span></div></li></a>"
       marker.title place.name
     end
   end
 
 end
+
+
+
