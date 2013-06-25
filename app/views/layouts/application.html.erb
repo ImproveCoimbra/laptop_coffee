@@ -5,10 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
-
     <meta name="description" content="Encontra cafés em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.">
     <meta name="keywords" content="coimbra,portáteis,cafés,wifi,wi-fi,trabalhar,estudar,laptops,free wifi">
 
@@ -17,8 +16,17 @@
     <meta property="fb:admins" content="<%= ENV["FB_ADMINS"] %>" />
     <meta property="og:type" content="website" />
 
-    <title>Portáteis ♥ Cafés ♥ Coimbra</title>
-    <meta property="og:title" content="Portáteis ♥ Cafés ♥ Coimbra" />
+    <title>Cafés WiFi Coimbra</title>
+    <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
+    <link href="/assets/touch-icon-iphone-114.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="/assets/touch-icon-iphone-114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="/assets/touch-icon-ipad-144.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="/assets/touch-icon-ipad-144.png" rel="apple-touch-icon" sizes="144x144">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="WiFi C.">
+    <meta property="og:title" content="Cafés WiFi Coimbra" />
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -43,11 +51,17 @@
       </script>
     <% end %>
 
-    <header class="row-fluid">
-      <div class="span12">
-        <h1>Portáteis <i class="icon-heart"></i> Cafés <i class="icon-heart"></i> Coimbra</h1>
-        <div class="fb-like">
-          <iframe src="http://www.facebook.com/plugins/like.php?href=http://cafewifi.madeincoimbra.org&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+    <header>
+      <div id="menu-bar">
+        <div class="container">
+          <div id="logo" onclick="location.href='.';" style="cursor:pointer;"></div>
+          <div class="menu">
+            <ul class="inline unstyled">
+              <li><a href="/" class="selected">Cafés</a></li>
+              <li><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Submeter</a></li>
+              <!--<li><a href="#">Sobre</a></li>-->
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -58,10 +72,18 @@
     <%= yield %>
 
     <footer>
-      <p><a href="http://improve.madeincoimbra.org/">Improve Coimbra! 2013</a></p>
-      <p class="alert" style="text-align: center">Esta é uma versão experimental do site. Ainda há muito a fazer :) Sabes de mais cafés assim? <a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Envia-nos um mail.</a></p>
+      <div class="container">
+        <p><a href="http://improve.madeincoimbra.org" target="_blank">Improve Coimbra</a>, 2013</p>
+      </div>
     </footer>
 
     <%= yield :scripts %>
+
+    <script type="text/javascript">
+    $('#markers-list').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+    </script>
   </body>
 </html>
