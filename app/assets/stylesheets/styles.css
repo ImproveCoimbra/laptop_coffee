@@ -100,13 +100,14 @@ footer a:active { text-decoration: none; }
 
 /* iPhone 5 or iPod Touch 5th generation */
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    .map_container .gmaps4rails_map { height: 300px !important; }
+    .map_container .gmaps4rails_map { height: 96px !important; }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-    #logo { left: 50%; margin: -25px 0 0 -36px; position: relative; }
-    .menu { float: none; text-align: center; }
+    .map_container .gmaps4rails_map { height: 869px !important; }
+    /*#logo { left: 50%; margin: -25px 0 0 -36px; position: relative; }*/
+    /*.menu { float: none; text-align: center; }*/
 }
 
 /* Portrait phones */
