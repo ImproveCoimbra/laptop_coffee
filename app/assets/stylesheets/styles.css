@@ -19,7 +19,7 @@ li a:active { text-decoration: none; }
 
 /* Map */
 .search { width: 250px; left: 50%; margin: 28px 0 0 -125px; padding: 2px 2px; background-color: #ccc; position: absolute; z-index: 10; display: none; }
-.search .add-on { border-radius: 0 !important; border: 0 !important; color: #999 !important; background-color: #fff; !important; }
+.search .add-on { border-radius: 0 !important; border: 0 !important; color: #999 !important; background-color: #fff !important; }
 .search input { width: 213px; }
 .map-wrapper { width: 100%; }
 .overallMap { width: 100%; height: 100% !important; overflow: hidden; }
@@ -75,7 +75,7 @@ footer a:active { text-decoration: none; }
     .container { width: 90%; }
     .list ul { padding-left: 3%; overflow: hidden; }
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
     .container { width: 90%; }
@@ -83,7 +83,7 @@ footer a:active { text-decoration: none; }
     .list ul { padding-left: 6%; overflow: hidden; }
     .list li { margin-left: -5px; margin-right: -2px; }
 }
- 
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     body { padding: 0 0; }
@@ -104,7 +104,7 @@ footer a:active { text-decoration: none; }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
     .map_container .gmaps4rails_map { height: 869px !important; }
     /*#logo { left: 50%; margin: -25px 0 0 -36px; position: relative; }*/
     /*.menu { float: none; text-align: center; }*/
