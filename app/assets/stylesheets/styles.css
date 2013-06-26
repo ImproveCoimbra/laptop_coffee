@@ -38,7 +38,7 @@ li a:active { text-decoration: none; }
 #features-section { padding: 65px 0 45px 0; }
 .lead { text-align: center; }
 .lead p { margin-bottom: 0; }
-.fb-like { width: 82px; height: 20px; margin: 20px auto 0 auto; overflow: hidden; }
+.fb-like { width: 115px; height: 20px; margin: 20px auto 0 auto; overflow: hidden; }
 
 /* List of places */
 .list { padding: 65px 0 55px 0; background-color: #ebebeb; overflow: hidden; }
