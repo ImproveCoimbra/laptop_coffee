@@ -1,5 +1,15 @@
-body { color: #000; background-color: #fff; }
-input { border-radius: 0 !important; outline: none; border:none !important; box-shadow:none !important; }
+body {
+    color: #000;
+    background-color: #fff;
+}
+
+input {
+    border-radius: 0 !important;
+    outline: none;
+    border:none !important;
+    box-shadow:none !important;
+}
+
 .container { max-width: 900px; }
 
 li a:link { color: #000; text-decoration: none; }
@@ -7,59 +17,181 @@ li a:visited { color: #000; text-decoration: none; }
 li a:hover { color: #007BB8; text-decoration: none; }
 li a:active { text-decoration: none; }
 
-/* Header */
-#menu-bar { padding: 36px 0 25px 0; color: #C8C9CB; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; background-color: #3d3e40; overflow: hidden; }
+/* HEADER */
+
+#menu-bar {
+    padding: 36px 0 25px 0;
+    color: #C8C9CB;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #3d3e40;
+    overflow: hidden;
+}
+
 #menu-bar li a:link { color: #C8C9CB; text-decoration: none; }
 #menu-bar li a:visited { color: #C8C9CB; text-decoration: none; }
 #menu-bar li a:hover { color: #fff; text-decoration: none; }
 #menu-bar li a:active { text-decoration: none; }
 #menu-bar li a.selected { border-bottom: 1px solid; }
-#logo { width: 162px; height: 90px; top: 0; background-image: url("/assets/cafewifi-logo.png"); background-size: 70px auto; background-position: 0 50%; background-repeat: no-repeat; position: absolute; }
+
+#logo {
+    width: 162px;
+    height: 90px;
+    top: 0;
+    background-image: url("/assets/cafewifi-logo.png");
+    background-size: 70px auto;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
 .menu { float: right; }
 
-/* Map */
-.search { width: 250px; left: 50%; margin: 28px 0 0 -125px; padding: 2px 2px; background-color: #ccc; position: absolute; z-index: 10; display: none; }
-.search .add-on { border-radius: 0 !important; border: 0 !important; color: #999 !important; background-color: #fff !important; }
+/* MAP */
+
+.search {
+    width: 250px;
+    left: 50%;
+    margin: 28px 0 0 -125px;
+    padding: 2px 2px;
+    background-color: #ccc;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+.search .add-on {
+    border-radius: 0 !important;
+    border: 0 !important;
+    color: #999 !important;
+    background-color: #fff !important;
+}
+
 .search input { width: 213px; }
 .map-wrapper { width: 100%; }
-.overallMap { width: 100%; height: 100% !important; overflow: hidden; }
+
+.overallMap {
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+}
+
 .overallMap:hover { cursor: hand; }
-.row.data-wrapper .list-wrapper, .row.data-wrapper .map-wrapper { display: block; float: left; min-height: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.row.data-wrapper .list-wrapper, .row.data-wrapper .map-wrapper {
+    display: block;
+    float: left;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#map-scroll-down {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    border-radius: 25px;
+    background-color: #3d3e40;
+    position: absolute;
+}
 
 /* Gmaps4rails + Bootstrap controllers fix */
+
 #map img { max-width: none; }
-#map label { width: auto; display:inline; }
+#map label { width: auto; display: inline; }
 
 /* Gmaps4rails Customizations */
-.map_container { padding: 0px; border-width: 0px; width: 100%; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
+
+.map_container {
+    padding: 0px;
+    border-width: 0px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
 .map_container .gmaps4rails_map { width: 100%; height: 450px !important; }
 
-/* Features Row */
-#features-section { padding: 65px 0 45px 0; }
+/* FEATURES ROW */
+
+#features-section { padding: 67px 0 55px 0; }
 .lead { text-align: center; }
 .lead p { margin-bottom: 0; }
-.fb-like { width: 115px; height: 20px; margin: 20px auto 0 auto; overflow: hidden; }
 
-/* List of places */
-.list { padding: 65px 0 55px 0; background-color: #ebebeb; overflow: hidden; }
+.fb-like {
+    width: 115px;
+    height: 20px;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+}
+
+/* LIST OF PLACES */
+
+.list {
+    padding: 75px 0 55px 0;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+
 .list ul { overflow: hidden; }
-.list li .span3 { max-width: 180px; height: 60px; margin: 0 4px 10px 5px; padding: 10px 10px; color: #666; font-weight: bold; text-align: center; line-height: 60px; background-color: #cfcfcf; }
-.list li .span3:hover { color: #000; }
-.place-name { display: inline-block; vertical-align: middle; line-height: normal; }
 
-/* Generic Row Settings */
+.list li .span3 {
+    max-width: 180px;
+    height: 60px;
+    margin: 0 4px 10px 5px;
+    padding: 10px 10px;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    background-color: #cfcfcf;
+}
+
+.list li .span3:hover { color: #000; }
+
+.place-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+/* GENERIC ROW SETTINGS */
+
 .row-fluid.section { padding-bottom: 25px; }
 .row-fluid.section h4 { text-align: center; }
 .row-fluid.section p { padding: 10px 20px; }
 .row-fluid.section [class*=" icon-"], .row-fluid.section [class^="icon-"] { vertical-align: baseline; font-size: 14px; }
 
-/* Ethics Row */
-#ethics-section { padding: 65px 0 80px 0; color: #fff; background-color: #58c68e; }
+/* ETHICS ROW */
+
+#ethics-section {
+    padding: 65px 0 80px 0;
+    color: #fff;
+    background-color: #58c68e;
+}
+
 #ethics-section .span4 { text-align: center; }
 #ethics-section .span4 [class^="icon-"], #ethics-section .span4 [class*=" icon-"] { font-size: 70px; line-height: 90px; }
 
-/* Footer */
-footer { padding: 35px 0 20px 0; text-align: center; font-size: 12px; color: #C8C9CB; background-color: #3d3e40; }
+/* FOOTER */
+
+footer {
+    padding: 35px 0 20px 0;
+    text-align: center; 
+    font-size: 12px;
+    color: #C8C9CB;
+    background-color: #3d3e40;
+}
+
 footer a:link { color: #C8C9CB; text-decoration: none; }
 footer a:visited { color: #C8C9CB; text-decoration: none; }
 footer a:hover { color: #fff; text-decoration: none; }
@@ -69,22 +201,29 @@ footer a:active { text-decoration: none; }
 
 
 /* Large desktop */
-@media (min-width: 1200px) { }
+
+@media (min-width: 1200px) {
+    #map-scroll-down { display: none; }
+}
 
 @media (min-width: 980px) and (max-width: 1199px) {
     .container { width: 90%; }
     .list ul { padding-left: 3%; overflow: hidden; }
+    #map-scroll-down { display: none; }
 }
 
 /* Portrait tablet to landscape and desktop */
+
 @media (min-width: 768px) and (max-width: 979px) {
     .container { width: 90%; }
     .map_container .gmaps4rails_map { height: 400px !important; }
     .list ul { padding-left: 6%; overflow: hidden; }
     .list li { margin-left: -5px; margin-right: -2px; }
+    #map-scroll-down { display: none; }
 }
 
 /* Landscape phone to portrait tablet */
+
 @media (max-width: 767px) {
     body { padding: 0 0; }
     .container { width: 90%; }
@@ -98,17 +237,20 @@ footer a:active { text-decoration: none; }
     #ethics-section { padding: 40px 0 40px 0; }
 }
 
-/* iPhone 5 or iPod Touch 5th generation */
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    .map_container .gmaps4rails_map { height: 96px !important; }
+/* Landscape phones and down */
+
+@media (max-width: 480px) {
+    .map_container .gmaps4rails_map { height: 280px !important; }
+    #map-scroll-down { margin-top: -80px; }
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    .map_container .gmaps4rails_map { height: 869px !important; }
-    /*#logo { left: 50%; margin: -25px 0 0 -36px; position: relative; }*/
-    /*.menu { float: none; text-align: center; }*/
+/* iPhone 5 or iPod Touch 5th generation */
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .map_container .gmaps4rails_map { height: 370px !important; }
+    #map-scroll-down { margin-top: -80px; }
 }
 
 /* Portrait phones */
+
 @media (max-width: 479px) { }
