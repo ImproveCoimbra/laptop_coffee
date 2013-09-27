@@ -22,8 +22,8 @@
     <link href="/assets/touch-icon-iphone-114.png" rel="apple-touch-icon" sizes="114x114">
     <link href="/assets/touch-icon-ipad-144.png" rel="apple-touch-icon" sizes="72x72">
     <link href="/assets/touch-icon-ipad-144.png" rel="apple-touch-icon" sizes="144x144">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex, follow">
+    <meta name="googlebot" content="noindex, follow">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="WiFi C.">
     <meta property="og:title" content="Cafés WiFi Coimbra" />
@@ -59,7 +59,6 @@
             <ul class="inline unstyled">
               <li><a href="/" class="selected">Cafés</a></li>
               <li><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Submeter</a></li>
-              <!--<li><a href="#">Sobre</a></li>-->
             </ul>
           </div>
         </div>
@@ -80,10 +79,15 @@
     <%= yield :scripts %>
 
     <script type="text/javascript">
-    $('#markers-list').click(function(){
-      $("html, body").animate({ scrollTop: 0 }, 800);
-      return false;
-    });
+      $('#markers-list').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 800);
+        return false;
+      });
+
+      $('#map-scroll-down').click(function(){
+        $("html, body").animate({ scrollTop: 461 }, 800);
+        return false;
+      });      
     </script>
   </body>
 </html>
