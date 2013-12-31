@@ -18,7 +18,7 @@ jQuery(function ($) {
         var height, windowHeight;
 
         windowHeight = jQueryCache.window.height();
-        
+
         if (windowHeight === lastHeight) {
             //If the height does not change bail out
             return;
@@ -41,9 +41,9 @@ jQuery(function ($) {
     Gmaps.map.geolocationSuccess = function () {
         Gmaps.map.createMarker({
            Lat: Gmaps.map.userLocation.lat(),
-           Lng: Gmaps.map.userLocation.lng(), 
-           rich_marker: null, 
-           marker_picture: "/assets/my_position_marker.png",
+           Lng: Gmaps.map.userLocation.lng(),
+           rich_marker: null,
+           marker_picture: "<%= asset_path('my_position_marker.png') %>",
            marker_width: 16,
            marker_height: 16,
            marker_anchor: null,
@@ -84,6 +84,7 @@ jQuery(function ($) {
     }
   };
 
+  /*
   $("#markers-list li").live("mouseover", function(){
     var i = $(this).index();
     var marker = Gmaps.map.markers[i].serviceObject;
@@ -98,4 +99,5 @@ jQuery(function ($) {
     //marker.setAnimation(null);
     marker.setIcon("<%= asset_path('red-dot.png') %>");
   });
+  */
 });
