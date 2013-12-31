@@ -1,7 +1,8 @@
 # encoding: UTF-8
 
 ActiveAdmin.register Place do
-  
+  permit_params :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible, :info_url
+
   config.sort_order = "name_asc"
 
   index do
@@ -48,7 +49,7 @@ ActiveAdmin.register Place do
       f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }
       f.input :visible
     end
-    f.buttons
+    f.actions
   end
 
   config.clear_action_items!
@@ -111,6 +112,5 @@ ActiveAdmin.register Place do
   filter :photo_urls
   filter :created_at
   filter :updated_at
-  filter :gmaps, :as => :select
 
 end
