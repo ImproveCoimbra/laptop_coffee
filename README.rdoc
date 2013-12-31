@@ -4,5 +4,5 @@ http://cafewifi.madeincoimbra.org
 
 === About
 
-This project is part of {Improve Coimbra's}[http://improve.madeincoimbra.org] first edition.
-More information on the {project's wiki}[http://projects.connectcoimbra.com/doku.php?id=laptop_friendly_laptops].
+This project is part of {Improve Coimbra's}[http://improvecoimbra.org] first edition.
+More information on the {project's wiki}[http://projects.connectcoimbra.com/doku.php?id=laptop_friendly_laptops] and {page}[http://improvecoimbra.org/project/cafes-wifi/].
