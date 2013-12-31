@@ -20,6 +20,9 @@ module LaptopCoffee
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Avoiding I18n deprecation warning
+    I18n.enforce_available_locales = true
+
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
