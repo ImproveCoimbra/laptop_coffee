@@ -31,6 +31,3 @@ gem 'gmaps4rails'
 
 # Active Admin
 gem 'activeadmin', github: 'gregbell/active_admin'
-
-# Help upgrading to rails 4.0
-gem 'rails4_upgrade'
