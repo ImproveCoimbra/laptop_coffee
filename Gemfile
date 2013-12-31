@@ -31,3 +31,6 @@ gem 'gmaps4rails'
 
 # Active Admin
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+# Open source utils
+gem 'figaro'
