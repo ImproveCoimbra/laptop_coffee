@@ -6,16 +6,13 @@ class Place < ActiveRecord::Base
   validates :name, :address, :presence => true
 
   # Ruby Geocoder
-  geocoded_by :address
-  after_validation :geocode, :if => lambda{ |obj| obj.address_changed? }
+  #geocoded_by :address
+  #after_validation :geocode, :if => lambda{ |obj| obj.address_changed? }
+  reverse_geocoded_by :latitude, :longitude, :address => :location
+  after_validation :reverse_geocode, :if => lambda{ |obj| obj.address_changed? }
 
   # Gmaps4Rails
-  acts_as_gmappable
-
-  def gmaps4rails_address
-    #describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
-    self.address
-  end
+  acts_as_gmappable :process_geocoding => false
 
   def gmaps4rails_infowindow
     "<h3>#{ERB::Util.html_escape name}</h3>" #+ "<p>#{ERB::Util.html_escape description}</p>"
