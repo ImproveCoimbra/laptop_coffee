@@ -6,6 +6,8 @@
 
 $(document).ready ->
 
+  return unless FS_CONFIG?
+
   $('input#place_foursquare_venue').fs_suggest
     'client_id':     FS_CONFIG['FOURSQUARE_CLIENT_ID']
     'client_secret': FS_CONFIG['FOURSQUARE_CLIENT_SECRET']
