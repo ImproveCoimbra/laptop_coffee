@@ -33,3 +33,25 @@
   width: 400px;
   height: 200px;
 }
+
+// Foursquare Venue Input
+
+.active_admin ul#fs_search_results {
+  margin-left: 20%;
+  margin-top: 10px;
+
+  li {
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      a {
+        color: #0E5286;
+        text-decoration: underline;
+      }
+    }
+  }
+}

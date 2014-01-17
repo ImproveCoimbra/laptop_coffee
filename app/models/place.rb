@@ -1,4 +1,6 @@
 class Place < ActiveRecord::Base
+  attr_accessor :foursquare_venue # Used for the ActiveAdmin form only
+
   serialize :photo_urls
   after_validation :process_photo_urls
 

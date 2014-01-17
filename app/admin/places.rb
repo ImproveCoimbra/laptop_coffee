@@ -40,10 +40,13 @@ ActiveAdmin.register Place do
 
   form do |f|
     f.inputs do
+      f.input :foursquare_venue, :label => 'Foursquare Venue Search'
+    end
+    f.inputs do
       f.input :name
       f.input :address
-      f.input :latitude, :as => :string unless f.object.new_record?
-      f.input :longitude, :as => :string unless f.object.new_record?
+      f.input :latitude,  :as => :string
+      f.input :longitude, :as => :string
       f.input :info_url, :as => :url
       f.input :description
       f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }

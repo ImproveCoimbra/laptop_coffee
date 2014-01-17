@@ -1,4 +1,6 @@
 # Add your secret key base here, as shown below.
 # You can use `rake secret` to have rails generate a secure secret key for you.
 # Make sure you rename the file to application.yml before running the server.
-RAILS_SECRET_KEY_BASE: 'e8d45013a777f88d378ebe2465e285fb7d312c3ffef514badf0070a8debd17b16168aaeff37b9b52225a356f8497553ca4032a94af02f91f4ec8ec4859d383f9'
+RAILS_SECRET_KEY_BASE:    'e8d45013a777f88d378ebe2465e285fb7d312c3ffef514badf0070a8debd17b16168aaeff37b9b52225a356f8497553ca4032a94af02f91f4ec8ec4859d383f9'
+FOURSQUARE_CLIENT_ID:     'XXXXXX'
+FOURSQUARE_CLIENT_SECRET: 'XXXXXX'
