@@ -45,13 +45,13 @@
       text-decoration: none;
     }
 
-    &:hover {
+    a:hover {
       cursor: pointer;
+      text-decoration: underline;
+    }
 
-      a {
-        color: #0E5286;
-        text-decoration: underline;
-      }
+    &.selected a, a:hover {
+      color: #007AD8;
     }
   }
 }
