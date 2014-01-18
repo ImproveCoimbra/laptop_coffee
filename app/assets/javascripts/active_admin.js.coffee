@@ -16,7 +16,7 @@ $(document).ready ->
     'radius': 20000  # 20Km
 
   $('input#place_foursquare_venue').on 'venue_selected.fq_suggest', (event, data) ->
-    venue = data.venueNode.find('a')
+    venue = data.venueNode
 
     $('input#place_name').val      venue.data 'name'
     $('input#place_address').val   if venue.data 'address' then "#{venue.data('address')}, #{venue.data('city')}" else ''
