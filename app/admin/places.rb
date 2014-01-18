@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 ActiveAdmin.register Place do
-  permit_params :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible, :info_url
+  permit_params :address, :description, :name, :photo_urls, :latitude, :longitude, :gmap, :visible, :info_url, :sticker
 
   config.sort_order = "name_asc"
 
@@ -11,7 +11,8 @@ ActiveAdmin.register Place do
     column :address
     #column :latitude
     #column :longitude
-    column 'URL' do |s| link_to "Info»", s.info_url, :title => s.info_url, :target => '_blank' if s.info_url? end
+    #column 'URL' do |s| link_to "Info»", s.info_url, :title => s.info_url, :target => '_blank' if s.info_url? end
+    column :sticker
     column :'Homepage?', :sortable => :visible do |s| s.visible end
     default_actions
     #column { |sighting| link_to('Approve', approve_admin_sighting_path(sighting), :method => :put) unless sighting.approved? }
@@ -24,6 +25,7 @@ ActiveAdmin.register Place do
       row :id
       row :name
       row :'Displayed on Homepage?' do s.visible end
+      row :sticker
       row :address
       row :computed_location do |s| render "map", { :markers => s.to_gmaps4rails }; end
       row :latitude
@@ -45,9 +47,10 @@ ActiveAdmin.register Place do
     f.inputs do
       f.input :name
       f.input :address
-      f.input :latitude,  :as => :string
-      f.input :longitude, :as => :string
-      f.input :info_url, :as => :url
+      f.input :latitude,   :as => :string
+      f.input :longitude,  :as => :string
+      f.input :info_url,   :as => :url
+      f.input :sticker,    :as => :select, :collection => (2013..Time.now.year)
       f.input :description
       f.input :photo_urls, :hint => "One URL per line, please.", :input_html => { :value => f.object.photo_urls.try(:join, "\n") }
       f.input :visible
@@ -108,7 +111,8 @@ ActiveAdmin.register Place do
 
   # Filters
 
-  filter :visible, :as => :select
+  filter :visible,    :as => :select
+  filter :sticker_eq, :as => :select, :collection => proc { ['None'] + (2013..Time.now.year).to_a }
   filter :name
   filter :info_url
   filter :description

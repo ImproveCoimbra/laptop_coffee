@@ -10,6 +10,11 @@ class Place < ActiveRecord::Base
   # Gmaps4Rails
   acts_as_gmappable :process_geocoding => false
 
+  # Overriding Ransack for stickers, allowing filtering for places with sticker == nil
+  ransacker :sticker, :formatter => proc { |year| year == 'None' ? nil : year } do |parent|
+    parent.table[:sticker]
+  end
+
   def gmaps4rails_infowindow
     "<h3>#{ERB::Util.html_escape name}</h3>" #+ "<p>#{ERB::Util.html_escape description}</p>"
   end
