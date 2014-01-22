@@ -6,3 +6,9 @@ http://cafewifi.madeincoimbra.org
 
 This project is part of {Improve Coimbra's}[http://improvecoimbra.org] first edition.
 More information on the {project's wiki}[http://projects.connectcoimbra.com/doku.php?id=laptop_friendly_laptops] and {page}[http://improvecoimbra.org/project/cafes-wifi/].
+
+=== Contributing
+
+We're trying to follow the {Github Flow}[http://scottchacon.com/2011/08/31/github-flow.html].
+
+You can also fork, change and create a Pull Request. Thanks!
