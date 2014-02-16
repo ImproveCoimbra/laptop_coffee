@@ -36,7 +36,7 @@ Place.create!([
                       :photo_urls         => ["https://lh3.googleusercontent.com/-zu9hXZ05NGk/UCOIyvuRicI/AAAAAABQkYI/GGhSEOImjOE/w264-h198-n-k/Galeria%2BBar%2BSanta%2BClara", "https://lh6.googleusercontent.com/-xp_roK1YXro/UCOAFaKV8WI/AAAAAABQUoQ/atDaumhusm8/w265-h198-n-k/Galeria%2BBar%2BSanta%2BClara"],
                       :visible            => true,
                       :latitude           => 40.21285,
-                      :longitude          => -8.397202
+                      :longitude          => -8.397202,
                       :sticker            => 2014
                   },
                   {
