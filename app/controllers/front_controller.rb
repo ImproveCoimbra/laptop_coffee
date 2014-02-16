@@ -14,7 +14,7 @@ class FrontController < ApplicationController
         #:shadow_width => '40',
         #:shadow_anchor => ['-26px', '-32px'],
       })
-      marker.sidebar "<li><div class='span3'><span class='place-name'>#{place.name}</span></div></li></a>"
+      marker.sidebar "<li><div class='span3'><span class='place-name'>#{place.name}</span>#{place.sticker ? '<img src="'+ActionController::Base.helpers.image_path('icon-sticker.png')+'" class="place-icon" title="Identificado com o autocolante Caf&eacute; Wifi '+place.sticker.to_s+'"/>' : ''}</div></li></a>"
       marker.title place.name
     end
   end

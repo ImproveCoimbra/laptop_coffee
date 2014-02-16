@@ -26,7 +26,8 @@ Place.create!([
                       :photo_urls         => [],
                       :visible            => true,
                       :latitude           => 40.212534,
-                      :longitude          => -8.39735
+                      :longitude          => -8.39735,
+                      :sticker            => 2013
                   },
                   {
                       :name               => "Galeria Bar Santa Clara",
@@ -36,6 +37,7 @@ Place.create!([
                       :visible            => true,
                       :latitude           => 40.21285,
                       :longitude          => -8.397202
+                      :sticker            => 2014
                   },
                   {
                       :name               => "Café e Cervejaria Samambaia",
