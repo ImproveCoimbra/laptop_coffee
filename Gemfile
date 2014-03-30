@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.0'
-gem 'rails', '~> 4.0.2'
+gem 'rails', '~> 4.0.4'
 
 group :development do
   gem 'sqlite3'
@@ -19,7 +19,7 @@ end
 gem 'json'
 
 # Assets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.2'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
