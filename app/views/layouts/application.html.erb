@@ -8,15 +8,15 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Encontra cafés com wifi em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.">
-    <meta name="keywords" content="coimbra,portáteis,cafés,wifi,wi-fi,trabalhar,estudar,laptops,free wifi">
+    <meta name="description" content="<%= t('.meta_description') %>">
+    <meta name="keywords" content="<%= t('.meta_description') %>">
 
     <!-- Facebook stuff -->
     <meta property="og:image" content="<%= image_url('praca_republica.png') %>" />
     <meta property="fb:admins" content="<%= ENV["FB_ADMINS"] %>" />
     <meta property="og:type" content="website" />
 
-    <title>Cafés WiFi Coimbra</title>
+    <title><%= t('.project_name') %></title>
     <link rel="shortcut icon" type="image/png" href="<%= image_path('favicon.png') %>">
     <link href="/assets/touch-icon-iphone-114.png" rel="apple-touch-icon" sizes="57x57">
     <link href="/assets/touch-icon-iphone-114.png" rel="apple-touch-icon" sizes="114x114">
@@ -25,8 +25,8 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="WiFi C.">
-    <meta property="og:title" content="Cafés WiFi Coimbra" />
+    <meta name="apple-mobile-web-app-title" content="<%= t('.mobile_webapp_title') %>">
+    <meta property="og:title" content="<%= t('.project_name') %>" />
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -57,8 +57,8 @@
           <div id="logo" onclick="location.href='.';" style="cursor:pointer;"></div>
           <div class="menu">
             <ul class="inline unstyled">
-              <li><a href="/" class="selected">Cafés Wifi Coimbra</a></li>
-              <li><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Submeter</a></li>
+              <li><a href="/" class="selected"><%= t('.project_name') %></a></li>
+              <li><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>"><%= t('.submit') %></a></li>
             </ul>
           </div>
         </div>
