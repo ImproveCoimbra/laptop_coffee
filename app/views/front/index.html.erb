@@ -36,7 +36,7 @@
 <div id="sticker-section">
   <div class="container row-fluid">
     <div class="span2">
-      <img src="<%= asset_path('cafewifi-sticker.png') %>" alt="<%= t('.sticker.img_alt') %>" />
+      <%= image_tag 'cafewifi-sticker.png', :title => t('.sticker.img_title') %>
     </div>
     <div class="span9 offset1 lead">
       <p><%= t('.sticker.purpose') %></p>
