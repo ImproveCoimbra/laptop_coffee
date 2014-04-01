@@ -1,5 +1,33 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+
+  layouts:
+    application:
+      project_name: Cafés Wifi Coimbra
+      submit: Submit
+      meta_description: 'Find laptop-enabled coffee shops in Coimbra, with wifi, power plugs and a friendly staff.'
+      meta_keywords: 'coimbra,laptops,coffee,wifi,wi-fi,work,study,portáteis,free wifi'
+      mobile_webapp_title: Wifi C.
+
+  front:
+    index:
+      rules:
+        wifi: The selected coffee shops provide free wifi for their clients
+        power: There's a reasonable number of power plugs available
+        staff: Customers who want to work during the whole afternoon are welcome
+      places:
+        sticker_img_title: 'Identified with the Café Wifi %{year} sticker'
+      ethics:
+        consume: |
+          Give back by consuming
+          during your stay
+        hours: |
+          Avoid popular hours,
+          like dinner and luch time
+        usage: |
+          Only use the space you need
+          (tables, chairs, etc)
+      sticker:
+        purpose: This sticker was created to indentify the places listed here and certifies they follow our selection criteria.
+        call_to_action: Find it through the streets of Coimbra!
+        owners: Owner? Submit your coffee shop and get a sticker like this one.
+        img_title: The Sticker

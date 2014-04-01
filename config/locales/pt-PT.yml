@@ -1,0 +1,27 @@
+pt-PT:
+
+  layouts:
+    application:
+      project_name: Cafés Wifi Coimbra
+      submit: Submeter
+      meta_description: 'Encontra cafés com wifi em Coimbra onde podes trabalhar ou estudar, e que estejam aptos à utilização de portáteis.'
+      meta_keywords: 'coimbra,portáteis,cafés,wifi,wi-fi,trabalhar,estudar,laptops,free wifi'
+      mobile_webapp_title: Wifi C.
+
+  front:
+    index:
+      rules:
+        wifi: Os cafés selecionados têm wifi gratuito disponível para os clientes
+        power: Existe um número razoável de tomadas públicas
+        staff: Pessoas que queiram passar a tarde a trabalhar são bem recebidas
+      places:
+        sticker_img_title: 'Identificado com o autocolante Café Wifi %{year}'
+      ethics:
+        consume: Retribui consumindo durante o teu tempo de permanência
+        hours: 'Evita as horas de maior afluência, como as horas de almoço e de jantar'
+        usage: 'Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc)'
+      sticker:
+        purpose: Este autocolante foi criado para identificar os Cafés Wifi e certifica que um estabelecimento respeita os nossos critérios de selecção.
+        call_to_action: Procura-o pelas ruas de Coimbra!
+        owners: Proprietário? Submeta o seu café e receba um autocolante como este.
+        img_title: O Autocolante

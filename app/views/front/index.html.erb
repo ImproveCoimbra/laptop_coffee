@@ -12,9 +12,9 @@
 
 <div id="features-section">
   <div class="container lead">
-    <p><i class="icon-laptop"></i> Os cafés selecionados têm wifi gratuito disponível para os clientes</p>
-    <p><i class="icon-bolt"></i> Existe um número razoável de tomadas públicas</p>
-    <p><i class="icon-thumbs-up"></i> Pessoas que queiram passar a tarde a trabalhar são bem recebidas</p>
+    <p><i class="icon-laptop"></i> <%= t('.rules.wifi') %></p>
+    <p><i class="icon-bolt"></i> <%= t('.rules.power') %></p>
+    <p><i class="icon-thumbs-up"></i> <%= t('.rules.staff') %></p>
     <div class="fb-like"><iframe src="http://www.facebook.com/plugins/like.php?href=http://cafewifi.madeincoimbra.org&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe></div>
   </div>
 </div>
@@ -27,21 +27,21 @@
 
 <div id="ethics-section">
   <div class="container row-fluid">
-    <div class="span4"><i class="icon-coffee"></i><br> Retribui consumindo durante o teu tempo de permanência</div>
-    <div class="span4"><i class="icon-time"></i><br> Evita as horas de maior afluência, como as horas de almoço e de jantar</div>
-    <div class="span4"><i class="icon-refresh"></i><br> Utiliza apenas o espaço que necessitas (mesas, cadeiras, etc)</div>
+    <div class="span4"><i class="icon-coffee"></i><br> <%= simple_format t('.ethics.consume') %></div>
+    <div class="span4"><i class="icon-time"></i><br> <%= simple_format t('.ethics.hours') %></div>
+    <div class="span4"><i class="icon-refresh"></i><br> <%= simple_format t('.ethics.usage') %></div>
   </div>
 </div>
 
 <div id="sticker-section">
   <div class="container row-fluid">
     <div class="span2">
-      <img src="<%= asset_path('cafewifi-sticker.png') %>" alt="O Autocolante" />
+      <%= image_tag 'cafewifi-sticker.png', :title => t('.sticker.img_title') %>
     </div>
     <div class="span9 offset1 lead">
-      <p>Este autocolante foi criado para identificar os Cafés Wifi e certifica que um estabelecimento respeita os nossos critérios de selecção.</p>
-      <p>Procura-o pelas ruas de Coimbra!</p>
-      <p class="proprietario"><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>">Proprietário? Submeta o seu café e receba um autocolante como este.</a></a></p>
+      <p><%= t('.sticker.purpose') %></p>
+      <p><%= t('.sticker.call_to_action') %></p>
+      <p class="proprietario"><a href="mailto:<%= ENV['CONTACT_EMAIL'] %>"><%= t('.sticker.owners') %></a></a></p>
     </div>
   </div>
 </div>
