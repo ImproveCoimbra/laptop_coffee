@@ -14,6 +14,8 @@ pt-PT:
         wifi: Os cafés selecionados têm wifi gratuito disponível para os clientes
         power: Existe um número razoável de tomadas públicas
         staff: Pessoas que queiram passar a tarde a trabalhar são bem recebidas
+      places:
+        sticker_img_title: 'Identificado com o autocolante Café Wifi %{year}'
       ethics:
         consume: Retribui consumindo durante o teu tempo de permanência
         hours: 'Evita as horas de maior afluência, como as horas de almoço e de jantar'
