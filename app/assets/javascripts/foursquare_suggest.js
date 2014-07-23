@@ -16,7 +16,7 @@
 		var defaults = {
 			url	: 'https://api.foursquare.com/v2/venues/suggestcompletion?', // i suppose you could change this...
 			ll : '37.787920,-122.407458', //default to SF since it's well known
-			v : '20120609', //the date of the foursquare api version
+			v : '20130815', //the date of the foursquare api version
 			limit : 10, //perhaps an option to ignore limits
 			intent: 'browse', //Looking for geo-specific results
 			radius: 80000, //default to foursquare max of 80,000 meters (ll and radius are required with 'browse' intent)
