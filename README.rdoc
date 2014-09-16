@@ -1,4 +1,4 @@
-=== Live Website (beta)
+=== Live Website
 
 http://cafewifi.madeincoimbra.org
 
